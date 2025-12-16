@@ -12,8 +12,8 @@ A simple multi-page web project that helps users:
 - **Brands:** Clickable list that opens brand websites in a new tab
 
 ## Technologies
-- HTML5
-- CSS3
+- HTML
+- CSS
 - JavaScript (Vanilla)
 
 ## Project Structure
