@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hesaplama</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Yakıt Hesaplama Sayfası</h1>
+        <hr>
+        <nav>
+            <a href="index.html" class="menu-box">Ana Sayfa </a>
+        </nav>
+    </header>
+    <main>
+        <div style="width: 400px; margin: auto; text-align:center;" class="calculator">
+        <h2>Yakıt Hesaplama Sistemi</h2>
+        <br>
+        Aracınızın 100 Kilometre Mesafedeki Ortalama Yakıtı:
+        <br>
+        <input type="number" id="num1" placeholder="Örn: 5.6"required> LT
+        <br>
+        Güncel Yakıt Fiyatı:
+        <br>
+        <input type="number" id="num2" placeholder="Örn: 59.65"required>TL
+        <br>
+        <button onclick="calculate()">Hesapla</button>
+        <p id="result"></p>
+        </div>
+    </main>
+    <script>
+        function calculate() {
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            document.getElementById('result').textContent = `Aracınız kilometre başına ${((num1 * num2) /100).toFixed(2)} TL yakmaktadır.`
+        }
+    </script>
+</body>
+</html>

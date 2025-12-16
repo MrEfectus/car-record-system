@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markalar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Markalar</h1>
+        <hr>
+        <nav>
+            <a href="index.html">Ana Sayfa</a>
+        </nav>
+    </header>
+    <main>
+        <div style="width: 700px; margin: auto; text-align:center;">
+            <h2>Araç Markaları</h2>
+            <h4>Aşağıdaki listeden çeşitli araç markaları bulunmaktadır.</h4>
+            <h5>İlgili markanın üzerine tıklayarak sitesine gidebilir, daha detaylı bilgi edinebilirsiniz.</h5>
+            <ul id="arabalar"></ul>
+        </div>
+    </main>
+    <script>
+        const arabalar = [
+            { name: "BMW", URL: "https://www.bmw.com.tr" },
+            { name: "Mercedes", URL: "https://www.mercedes-benz.com.tr" },
+            { name: "Audi", URL: "https://www.audi.com.tr" },
+            { name: "Volvo", URL: "https://www.volvocars.com" },
+            { name: "Volkswagen", URL: "https://www.vw.com.tr" },
+            { name: "Ford", URL: "https://www.ford.com.tr" },
+            { name: "Renault", URL: "https://www.renault.com.tr" },
+            { name: "Citroen", URL: "https://www.citroen.com.tr" },
+            { name: "Peugeot", URL: "https://www.peugeot.com.tr" },
+            { name: "Chevrolet", URL: "https://www.chevrolet.com" },
+            { name: "Toyota", URL: "https://www.toyota.com.tr" },
+            { name: "Opel", URL: "https://www.opel.com.tr" },
+        ]
+        const arabaListe = document.getElementById('arabalar');
+        arabalar.forEach(araba => {
+            const listItem = document.createElement('li');
+            listItem.textContent = araba.name;
+            listItem.style.cursor = "pointer"; /* Fare ile üzerine gelince el işareti çıkıyor, tıklanabilir olduğu anlaşılıyor. */
+
+            listItem.onclick = () => {
+                window.open(araba.URL, "_blank"); /* _blank yeni sayfa açar, _self aynı sekmede açar. */
+            }
+            arabaListe.appendChild(listItem);
+        });
+    </script>
+</body>
+
+</html>
