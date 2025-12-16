@@ -31,4 +31,5 @@ After enabling GitHub Pages:
 `https://MrEfectus.github.io/car-record-system/`
 
 ## Author
-Mert Köksal
+[MrEfectus](https://github.com/MrEfectus)
+
